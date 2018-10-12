@@ -30,7 +30,7 @@ partial model cloth_gen
   parameter Integer M annotation(Evaluate = true);
   parameter Integer N annotation(Evaluate = true);
   parameter Boolean steadyState_mass = DSLglb.SteadyState;
-  Properties.ClothProperty clothPropsData;
+  parameter Properties.ClothProperty clothPropsData;
   //
   Parts.Cloth.Springs.Extension[M, N + 1] extension1(k = Initializers.Cloth_K1_initializer(P1, P2, P3, P4, M, N, E_mod = clothPropsData.E * clothPropsData.thickness), each d = clothPropsData.alpha, s_0 = Initializers.Cloth_K1s0_initializer(P1, P2, P3, P4, M, N));
   Parts.Cloth.Springs.Extension[M + 1, N] extension2(k = Initializers.Cloth_K2_initializer(P1, P2, P3, P4, M, N, E_mod = clothPropsData.E * clothPropsData.thickness), each d = clothPropsData.alpha, s_0 = Initializers.Cloth_K2s0_initializer(P1, P2, P3, P4, M, N));
