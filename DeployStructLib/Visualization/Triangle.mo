@@ -7,9 +7,9 @@ ALL RIGHTS RESERVED
 */
 
 model Triangle "Interface for 3D animation of triangle surface"
-  extends Surface;
+  extends Surface(N=3);
   final parameter String surfaceType = "Triangle" annotation(Evaluate=true);
-  final parameter Integer N = 3 annotation(Evaluate=true);
+
 annotation(Documentation(info="<html>
 <p>
 Copyright &copy; 2018<br>

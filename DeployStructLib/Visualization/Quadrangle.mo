@@ -7,9 +7,8 @@ ALL RIGHTS RESERVED
 */
 
 model Quadrangle "Interface for 3D animation of quadrangle shape"
-  extends Surface;
+  extends Surface(N=4);
   final parameter String surfaceType = "Quadrangle" annotation(Evaluate=true);
-  final parameter Integer N = 4 annotation(Evaluate=true);
 
 annotation(Documentation(info="<html>
 <p>
