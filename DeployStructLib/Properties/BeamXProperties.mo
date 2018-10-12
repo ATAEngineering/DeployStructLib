@@ -10,12 +10,17 @@ package BeamXProperties
   "Records for Beam cross section properties"
     extends Modelica.Icons.Package;
   model beamCrossSectionType
-    type xtype = enumeration(Circular_Rod, Circular_Tube, Rectangular_Bar, Rectangular_Tube, General_Section);
+    type xtype = enumeration(
+        Circular_Rod,
+        Circular_Tube,
+        Rectangular_Bar,
+        Rectangular_Tube,
+        General_Section);
   end beamCrossSectionType;
 
   record beamXProperty
     import SI = Modelica.SIunits;
-    final parameter beamCrossSectionType.xtype crossSectionType;
+    parameter beamCrossSectionType.xtype crossSectionType;
     parameter SI.Length width = 0 "Width= Length of Dimension in Local y";
     parameter SI.Length height = 0 "Height=Length of Dimension in Local z";
     parameter SI.Length d = 0 "Outer Diameter";
@@ -259,7 +264,7 @@ package BeamXProperties
       assert(true, "Invalid cross-section", AssertionLevel.error);
     end if;
   end BeamCMCalc;
-  
+
 annotation(Documentation(info = "<html>
 <p>
 Beam cross section properties for use with the DeployStructLib.Parts.Beam block. Properties are automatically calculated based on cross section dimensions. 
