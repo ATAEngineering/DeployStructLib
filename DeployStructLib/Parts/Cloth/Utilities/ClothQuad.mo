@@ -36,10 +36,18 @@ partial model ClothQuad
   parameter Boolean useSideAFrame = true;
   parameter Boolean useSideBFrame = true;
   //
+  parameter SI.Mass[M-1, N+1] m_init;
+  parameter SI.Mass[1, N+1] m_init_edgeA;
+  parameter SI.Mass[1, N+1] m_init_edgeB;
+  parameter Real[M-1, N+1, 3] r_0_start;
+  parameter Real[1, N+1, 3] r_0_start_edgeA;
+  parameter Real[1, N+1, 3] r_0_start_edgeB;
   //
   Parts.Cloth.Springs.NaturalQuad[M, N] quad(Kqin = Initializers.Cloth_NatQuad_Init(M, N, clothPropsData.E, clothPropsData.G, clothPropsData.nu, clothPropsData.thickness, P1, P2, P3, P4, P1_loc = P1_loc, ref_angles = ref_angles, P1_start = P1_loc + Frames.resolve2(Frames.axesRotations(axes_sequence, ref_angles, zeros(3)), P1_start), P2_start = P1_loc + Frames.resolve2(Frames.axesRotations(axes_sequence, ref_angles, zeros(3)), P2_start), P3_start = P1_loc + Frames.resolve2(Frames.axesRotations(axes_sequence, ref_angles, zeros(3)), P3_start), P4_start = P1_loc + Frames.resolve2(Frames.axesRotations(axes_sequence, ref_angles, zeros(3)), P4_start)), each beta = clothPropsData.beta, each color = color);
   //
-  //
+  Mass[M-1, N+1] mass(m = m_init, each enforceStates = true, each steadyState = steadyState_mass, each isCoincident = false, r_0(start = r_0_start), each alpha = clothPropsData.alpha, each animation = false);
+  Mass[1, N+1] edgeMassA(m = m_init_edgeA, r_0(start = r_0_start_edgeA), each isCoincident = useSideAFrame, each alpha = clothPropsData.alpha, each animation = false, each steadyState = not useSideAFrame and steadyState_mass);
+  Mass[1, N+1] edgeMassB(m = m_init_edgeB, r_0(start = r_0_start_edgeB), each isCoincident = useSideBFrame, each alpha = clothPropsData.alpha, each animation = false, each steadyState = not useSideBFrame and steadyState_mass);
   //
   Parts.Cloth.Interfaces.Location2Frame[N + 1] sideA if useSideAFrame;
   Parts.Cloth.Interfaces.Location2Frame[N + 1] sideB if useSideBFrame;

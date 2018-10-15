@@ -9,6 +9,7 @@ ALL RIGHTS RESERVED
 function Cloth_Mass_Origami_Initializer
   import Modelica.Math.Vectors;
   import DeployStructLib;
+  import Modelica.Utilities.Streams.print;
   input Integer M, H, R, J;
   input Real Rad "Inner polygon radius";
   input Real area_density;

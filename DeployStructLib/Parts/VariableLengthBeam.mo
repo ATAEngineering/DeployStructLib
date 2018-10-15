@@ -75,7 +75,7 @@ model VariableLengthBeam
   //
   // Assume small displacements so that Itt is constant
   // Rigid rotational moment of inertia about frame_a
-  SI.Inertia Itt_massless[3] = BeamIttCalc(xprop, L) "Inertia tensor of body box with respect to center of mass, parallel to frame_a";
+  Real Itt_massless[3] = BeamIttCalc(xprop, L) "Inertia tensor of body box with respect to center of mass, parallel to frame_a";
   SI.Inertia Itt[3] = mass * (Itt_massless + {0, (L / 2) ^ 2, (L / 2) ^ 2}) "Inertia tensor of body box with respect frame_a";
   SI.Acceleration g_0[3] "Gravity acceleration resolved in world frame";
   //

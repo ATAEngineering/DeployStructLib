@@ -20,7 +20,7 @@ model ClothOrigami
   parameter Integer R(min=2) = 2 annotation(Evaluate = true); //Cannot be less than 2 in current implementation
   parameter Integer N = R * H;
   parameter Boolean steadyState_mass = DSLglb.SteadyState;
-  DeployStructLib.Properties.ClothProperty clothPropsData;
+  parameter DeployStructLib.Properties.ClothProperty clothPropsData;
   //
   parameter Modelica.Mechanics.MultiBody.Types.RealColor color = {0, 0, 224} "Color of cloth" annotation(Dialog(enable = animation and not multiColoredSurface, colorSelector = true, group = "Material properties"));
   //

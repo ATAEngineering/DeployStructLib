@@ -38,6 +38,11 @@ equation
       raddir2[i,j] = Math.MyNormalize(locationforce2[i].location.r_0,j);
       tandir2[i,j] = Math.MyCross({0, 0, 1}, Modelica.Math.Vectors.normalize(locationforce2[i].location.r_0),j);
     end for;
+    // Should look like this:
+//    raddir1[i, :] = Modelica.Math.Vectors.normalize(locationforce1[i].location.r_0);
+//    tandir1[i, :] = cross({0, 0, 1}, Modelica.Math.Vectors.normalize(locationforce1[i].location.r_0));
+//    raddir2[i, :] = Modelica.Math.Vectors.normalize(locationforce2[i].location.r_0);
+//    tandir2[i, :] = cross({0, 0, 1}, Modelica.Math.Vectors.normalize(locationforce2[i].location.r_0));
     //
     locationforce1[i].force = f_rad * {raddir1[i, 1], raddir1[i, 2], 0} + f_tan * {tandir1[i, 1], tandir1[i, 2], 0};
     locationforce2[i].force = f_rad * {raddir2[i, 1], raddir2[i, 2], 0} + f_tan * {tandir2[i, 1], tandir2[i, 2], 0};

@@ -8,6 +8,7 @@ ALL RIGHTS RESERVED
 
 function OrigamiOpenPoint
   import pi = Modelica.Constants.pi;
+  import Modelica.Utilities.Streams.print;
   input Integer i, j, k;
   input Integer M, H, R;
   input Real Rad "Inner polygon radius";

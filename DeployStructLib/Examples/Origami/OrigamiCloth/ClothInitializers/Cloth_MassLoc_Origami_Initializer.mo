@@ -13,6 +13,7 @@ function Cloth_MassLoc_Origami_Initializer
   import Modelica.Constants.pi;
   import SI = Modelica.SIunits;
   import DeployStructLib;
+  import DeployStructLib.Examples.Origami.OrigamiCloth.ClothInitializers.OrigamiClosedPoint;
   input Integer M, H, R, J;
   input Real Rad "Inner polygon radius";
   input Boolean start_closed = true;
@@ -27,7 +28,7 @@ algorithm
         if start_closed then
           massLoc[k, j*(H*R+1)+(i+1), :] := OrigamiClosedPoint.OrigamiClosedPoint(i, j, k, M, H, R, Rad);
         else
-          massLoc[k, j*(H*R+1)+(i+1), :] := OrigamiClosedPoint.OrigamiOpenPoint(i, j, k, M, H, R, Rad);
+          massLoc[k, j*(H*R+1)+(i+1), :] := OrigamiOpenPoint(i, j, k, M, H, R, Rad);
         end if;
       end for;
     end for;
