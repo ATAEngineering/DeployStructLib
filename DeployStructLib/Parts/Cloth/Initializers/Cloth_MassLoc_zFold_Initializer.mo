@@ -28,7 +28,7 @@ encapsulated function Cloth_MassLoc_zFold_Initializer
   input Boolean debug = false;
   output Real A[M_act, N + 1, 3];
 
-  external "C" Cloth_MassLoc_zFold_Init(M,N,P1_start,P2_start,P3_start,P4_start,L,folds,isEdge,isEdgeB,dir_pos,debug,A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init");
+  external "C" Cloth_MassLoc_zFold_Init(M,N,P1_start,P2_start,P3_start,P4_start,L,folds,isEdge,isEdgeB,dir_pos,debug,A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init", __iti_dll="ITI_cloth_init.dll");
   annotation(Documentation(info="<html>
 <p>
 Copyright &copy; 2018<br>

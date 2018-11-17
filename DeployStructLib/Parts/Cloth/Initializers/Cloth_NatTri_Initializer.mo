@@ -29,7 +29,7 @@ encapsulated function Cloth_NatTri_Initializer "Initializer for Natural Triangle
   input Boolean debug = false;
   output Real Kq[M, N, 3, 7];
 
-  external "C" Cloth_NatTri_Init(M,N,E,G,nu,thickness,index,P1,P2,P3,P4,P1_loc,ref_angles,axes_sequence,debug,Kq) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init");
+  external "C" Cloth_NatTri_Init(M,N,E,G,nu,thickness,index,P1,P2,P3,P4,P1_loc,ref_angles,axes_sequence,debug,Kq) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init", __iti_dll="ITI_cloth_init.dll");
   annotation(Documentation(info="<html>
 <p>
 Copyright &copy; 2018<br>
