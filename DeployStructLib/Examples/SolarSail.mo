@@ -110,10 +110,8 @@ equation
     Line);
 //
   annotation(
-    uses(Modelica(version = "3.2.2")),
     Diagram(coordinateSystem(extent = {{-200, -200}, {200, 200}})),
     Icon(coordinateSystem(extent = {{-200, -200}, {200, 200}})),
-    version = "",
     __OpenModelica_simulationFlags(lv = "LOG_STATS", s = "dassl", emit_protected = "()"), Documentation(info="<html>
 <p>
 Copyright &copy; 2018<br>

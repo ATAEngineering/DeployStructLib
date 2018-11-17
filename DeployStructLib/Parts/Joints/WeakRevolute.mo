@@ -107,5 +107,5 @@ ATA ENGINEERING, INC.<br>
 ALL RIGHTS RESERVED
 </p>
 
-</html>"), uses(Modelica(version = "3.2.2")), Diagram(coordinateSystem(initialScale = 0.1)));
+</html>"), Diagram(coordinateSystem(initialScale = 0.1)));
 end WeakRevolute;
