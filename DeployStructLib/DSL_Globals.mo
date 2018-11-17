@@ -7,7 +7,6 @@ ALL RIGHTS RESERVED
 */
 
 model DSL_Globals
-  final parameter Real version = 1.1 "Version of the DeployStructLib";
   parameter Boolean enableAnimation = true "= true, if animation of all components is enabled" annotation(Evaluate=true);
   parameter Boolean SteadyState = false "= true, if components are to be initialized to steady state, otherwise will start with variable values=0.0";
 // Remove useDSgravity when omc bug #3202 is fixed
