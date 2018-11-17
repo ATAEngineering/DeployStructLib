@@ -9,7 +9,7 @@ ALL RIGHTS RESERVED
 model Bend_Center
   "Spring for modeling bending stiffness in the interior of a cloth block."
   import SI = Modelica.SIunits;
-  import pi = Modelica.Constants.PI;
+  import pi = Modelica.Constants.pi;
   import Modelica.Math.Vectors;
   Interfaces.Location location_a annotation(Placement(transformation(extent = {{-116, -16}, {-84, 16}}, rotation = 0)));
   Interfaces.Location location_b annotation(Placement(transformation(extent = {{84, -16}, {116, 16}}, rotation = 0)));
