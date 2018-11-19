@@ -39,9 +39,9 @@ model cloth
   parameter Boolean dir_pos = false "If using zFold, should the folds point in the positive direction?";
   //
   final parameter Boolean constrainEdges = false;
-  parameter Real[3] tangent_vector_sideA = {0, 1, 0} "Tangent vector w.r.t. ref_frame at which cloth angle is contrained";
+  parameter Real[3] tangent_vector_sideA = {0, 1, 0} "Tangent vector w.r.t. ref_frame at which cloth angle is constrained";
   parameter Real[3] bending_vector_sideA = {0, 0, 1} "Vector w.r.t. ref_frame that (with tangent_vector) defines the plane in which bending occurs";
-  parameter Real[3] tangent_vector_sideB = {0, -1, 0} "Tangent vector w.r.t. ref_frame at which cloth angle is contrained";
+  parameter Real[3] tangent_vector_sideB = {0, -1, 0} "Tangent vector w.r.t. ref_frame at which cloth angle is constrained";
   parameter Real[3] bending_vector_sideB = {0, 0, -1} "Vector w.r.t. ref_frame that (with tangent_vector) defines the plane in which bending occurs";
   //
   parameter Modelica.Mechanics.MultiBody.Types.RealColor color = {0, 0, 224} "Color of cloth" annotation(Dialog(enable = animation and not multiColoredSurface, colorSelector = true, group = "Material properties"));

@@ -17,7 +17,7 @@ model Bend_ConstrainedEdge
   //
   parameter SI.TranslationalSpringConstant k "Spring stiffness";
   parameter Real d = 0.01 "Damping";
-  parameter Real[3] tangent_vector = {0, 1, 0} "Tangent vector w.r.t. (local) ref_frame at which cloth angle is contrained, points in direction of cloth";
+  parameter Real[3] tangent_vector = {0, 1, 0} "Tangent vector w.r.t. (local) ref_frame at which cloth angle is constrained, points in direction of cloth";
   parameter Real[3] bending_vector = {0, 0, 1} "Vector w.r.t. ref_frame that (with tangent_vector) defines the plane in which bending occurs";
   //
   Real[3] rcb;
