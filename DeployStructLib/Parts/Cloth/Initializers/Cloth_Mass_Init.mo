@@ -20,7 +20,7 @@ encapsulated function Cloth_Mass_Init
   input Boolean isEdgeB = false;
   output Real A[M_act, N + 1];
 
-  external "C" Cloth_Mass_Init(P1,P2,P3,P4,M,N,density,M_act,debug,isEdge,isEdgeB,A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init");
+  external "C" Cloth_Mass_Init(P1,P2,P3,P4,M,N,density,M_act,debug,isEdge,isEdgeB,A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init", __iti_dll="ITI_cloth_init.dll");
   annotation(Documentation(info="<html>
 <p>
 Copyright &copy; 2018<br>

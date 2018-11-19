@@ -17,7 +17,7 @@ encapsulated function Cloth_G1s0_initializer
   final input Boolean debug = true;
   output Real A[M, N];
 
-  external "C" Cloth_G1s0_Init(P1, P2, P3, P4, M, N, debug, A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init");
+  external "C" Cloth_G1s0_Init(P1, P2, P3, P4, M, N, debug, A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init", __iti_dll="ITI_cloth_init.dll");
 //
   annotation(Documentation(info = "<HTML>
 <p>

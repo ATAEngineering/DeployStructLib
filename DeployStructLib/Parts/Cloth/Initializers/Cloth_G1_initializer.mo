@@ -19,7 +19,7 @@ encapsulated function Cloth_G1_initializer
   final input Boolean debug = false;
   output Real A[M, N];
 
-  external "C" Cloth_G1_Init(P1, P2, P3, P4, M, N, G_xy, thickness, debug, A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init");
+  external "C" Cloth_G1_Init(P1, P2, P3, P4, M, N, G_xy, thickness, debug, A) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init", __iti_dll="ITI_cloth_init.dll");
 
   annotation(Documentation(info = "<html>
 <p>

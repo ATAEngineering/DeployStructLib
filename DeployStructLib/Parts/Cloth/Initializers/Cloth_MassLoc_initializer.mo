@@ -27,7 +27,7 @@ encapsulated function Cloth_MassLoc_initializer
   Real T[3,3] = P_R.T;
   Real w[3] = P_R.w;
 
-  external "C" Cloth_MassLoc_Init(P1,P2,P3,P4,M,N,start_angle,P_ref,T,w,A,debug) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init");
+  external "C" Cloth_MassLoc_Init(P1,P2,P3,P4,M,N,start_angle,P_ref,T,w,A,debug) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init", __iti_dll="ITI_cloth_init.dll");
 
   annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<HTML>
 <p>

@@ -26,7 +26,7 @@ encapsulated function Cloth_NatQuad_Init
   input Boolean debug = false;
   output Real Kq[M, N, 6, 10];
 
-  external "C" Cloth_NatQuad_Init(M,N,E,G,nu,thickness,P1,P2,P3,P4,P1_loc,ref_angles,P1_start,P2_start,P3_start,P4_start,debug,Kq) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init");
+  external "C" Cloth_NatQuad_Init(M,N,E,G,nu,thickness,P1,P2,P3,P4,P1_loc,ref_angles,P1_start,P2_start,P3_start,P4_start,debug,Kq) annotation(Include = "#include \"cloth_init.h\" ", Library="cloth_init", __iti_dll="ITI_cloth_init.dll");
   annotation(Documentation(info="<html>
 <p>
 Copyright &copy; 2018<br>
