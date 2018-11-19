@@ -1,5 +1,5 @@
 
-export INCDIR=/opt/openmodelica/include/omc/c
+export INCDIR=/usr/include/omc/c
 export PATH=$INCDIR:$PATH
 
 gcc -c cloth_init.c -m64 -O0 -g -I$INCDIR -std=c99
