@@ -9,7 +9,7 @@ ALL RIGHTS RESERVED
 model Bend_ConstrainedEdge
   "Spring for modeling bending stiffness of a constrained edge of a cloth block."
   import SI = Modelica.SIunits;
-  import pi = Modelica.Constants.PI;
+  import pi = Modelica.Constants.pi;
   import Modelica.Mechanics.MultiBody.Frames;
   import Modelica.Math.Vectors;
   Modelica.Mechanics.MultiBody.Interfaces.Frame_a ref_frame annotation(Placement(transformation(extent = {{-116, -16}, {-84, 16}}, rotation = 0)));
