@@ -43,8 +43,8 @@ partial model ClothTri
   parameter Real[1, N+1, 3] r_0_start_edgeA;
   parameter Real[1, N+1, 3] r_0_start_edgeB;
   //
-  Parts.Cloth.Springs.NaturalTriangle[M, N] triBL(Kqin = Initializers.Cloth_NatTri_Initializer(M, N, clothPropsData.E, clothPropsData.G, clothPropsData.nu, clothPropsData.thickness, 1, P1, P2, P3, P4, P1_loc = P1_loc, ref_angles = ref_angles, axes_sequence = axes_sequence), each beta = clothPropsData.beta, each color = color);
-  Parts.Cloth.Springs.NaturalTriangle[M, N] triUR(Kqin = Initializers.Cloth_NatTri_Initializer(M, N, clothPropsData.E, clothPropsData.G, clothPropsData.nu, clothPropsData.thickness, 3, P1, P2, P3, P4, P1_loc = P1_loc, ref_angles = ref_angles, axes_sequence = axes_sequence), each beta = clothPropsData.beta, each color = color);
+  Parts.Cloth.Springs.NaturalTriangle[M, N] triBL(Kqin = Initializers.Cloth_NatTri_Init(M, N, clothPropsData.E, clothPropsData.G, clothPropsData.nu, clothPropsData.thickness, 1, P1, P2, P3, P4, P1_loc = P1_loc, ref_angles = ref_angles, axes_sequence = axes_sequence), each beta = clothPropsData.beta, each color = color);
+  Parts.Cloth.Springs.NaturalTriangle[M, N] triUR(Kqin = Initializers.Cloth_NatTri_Init(M, N, clothPropsData.E, clothPropsData.G, clothPropsData.nu, clothPropsData.thickness, 3, P1, P2, P3, P4, P1_loc = P1_loc, ref_angles = ref_angles, axes_sequence = axes_sequence), each beta = clothPropsData.beta, each color = color);
   //
   Mass[M-1, N+1] mass(m = m_init, each enforceStates = true, each steadyState = steadyState_mass, each isCoincident = false, r_0(start = r_0_start), each alpha = clothPropsData.alpha, each animation = false);
   Mass[1, N+1] edgeMassA(m = m_init_edgeA, r_0(start = r_0_start_edgeA), each isCoincident = useSideAFrame, each alpha = clothPropsData.alpha, each animation = false, each steadyState = not useSideAFrame and steadyState_mass);

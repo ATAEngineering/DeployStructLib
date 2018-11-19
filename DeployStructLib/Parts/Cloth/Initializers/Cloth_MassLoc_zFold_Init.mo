@@ -6,7 +6,7 @@ BY ATA ENGINEERING, INC.
 ALL RIGHTS RESERVED
 */
 
-encapsulated function Cloth_MassLoc_zFold_Initializer
+encapsulated function Cloth_MassLoc_zFold_Init
   "Initializer for calculating locations of individual, distributed masses in z-fold cloth"
   import Modelica.Math.Vectors;
   import Modelica.Mechanics.MultiBody.Frames;
@@ -38,4 +38,4 @@ ALL RIGHTS RESERVED
 
 </html>"));
 
-end Cloth_MassLoc_zFold_Initializer;
+end Cloth_MassLoc_zFold_Init;

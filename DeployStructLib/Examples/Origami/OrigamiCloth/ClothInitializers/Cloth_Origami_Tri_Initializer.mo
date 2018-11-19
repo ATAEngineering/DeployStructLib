@@ -46,7 +46,7 @@ algorithm
           tmp1 := OrigamiOpenPoint(i, jj, k, M, H, R, Rad);
           tmp2 := OrigamiOpenPoint(i - 1, jj, k, M, H, R, Rad);
           tmp3 := OrigamiOpenPoint(i, min1, k, M, H, R, Rad);
-          Kqtmp := DeployStructLib.Parts.Cloth.Initializers.Cloth_NatTri_Initializer(1, 1, E, G, nu, thickness, 1, tmp1, tmp2, tmp4, tmp3);
+          Kqtmp := DeployStructLib.Parts.Cloth.Initializers.Cloth_NatTri_Init(1, 1, E, G, nu, thickness, 1, tmp1, tmp2, tmp4, tmp3);
           Kq[k, count, :, :] := Kqtmp[1, 1, :, :];
           count := count + 1;
         end if;
@@ -62,7 +62,7 @@ algorithm
           tmp1 := OrigamiOpenPoint(ii, j, k, M, H, R, Rad);
           tmp2 := OrigamiOpenPoint(ii, j - 1, k, M, H, R, Rad);
           tmp3 := OrigamiOpenPoint(min1, j, k, M, H, R, Rad);
-          Kqtmp := DeployStructLib.Parts.Cloth.Initializers.Cloth_NatTri_Initializer(1, 1, E, G, nu, thickness, 1, tmp1, tmp2, tmp4, tmp3);
+          Kqtmp := DeployStructLib.Parts.Cloth.Initializers.Cloth_NatTri_Init(1, 1, E, G, nu, thickness, 1, tmp1, tmp2, tmp4, tmp3);
           Kq[k, count, :, :] := Kqtmp[1, 1, :, :];
           count := count + 1;
         end if;

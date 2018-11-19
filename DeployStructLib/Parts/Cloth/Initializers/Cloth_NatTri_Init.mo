@@ -6,7 +6,7 @@ BY ATA ENGINEERING, INC.
 ALL RIGHTS RESERVED
 */
 
-encapsulated function Cloth_NatTri_Initializer "Initializer for Natural Triangle springs, outputs Kq"
+encapsulated function Cloth_NatTri_Init "Initializer for Natural Triangle springs, outputs Kq"
   import Modelica.Math.Vectors;
   import Modelica.Mechanics.MultiBody.Frames;
   import Modelica.Utilities.Streams.print;
@@ -38,4 +38,4 @@ ALL RIGHTS RESERVED
 </p>
 
 </html>"));
-end Cloth_NatTri_Initializer;
+end Cloth_NatTri_Init;
