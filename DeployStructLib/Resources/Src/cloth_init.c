@@ -60,7 +60,7 @@ void axisRotation(double* T, int axis, double angle)
   }
 }
 
-void axesRotation(double* T, int* sequence, double* angles)
+void axesRotation(double* T, const int* sequence, const double* angles)
 {
   double rot3[3*3];
   double rot2[3*3];
@@ -76,7 +76,7 @@ void axesRotation(double* T, int* sequence, double* angles)
 }
 
 
-void CoonsPatch(double* P1, double* P2, double* P3, double* P4, double s, double t, int debug, double* pos)
+void CoonsPatch(const double* P1, const double* P2, const double* P3, const double* P4, double s, double t, int debug, double* pos)
 {
   pos[0] = P1[0] * (1-s) * (1-t) + P2[0] * (1 - s) * t + P4[0] * s * (1 - t) + P3[0] * s * t;
   pos[1] = P1[1] * (1-s) * (1-t) + P2[1] * (1 - s) * t + P4[1] * s * (1 - t) + P3[1] * s * t;
@@ -90,7 +90,7 @@ void CoonsPatch(double* P1, double* P2, double* P3, double* P4, double s, double
   }
 }
 
-void Cloth_NatQuad_Init(int M,int N,double E,double G,double nu,double thickness,double* P1,double* P2,double* P3,double* P4,double* P1_loc,double* ref_angles,double* P1_start,double* P2_start,double* P3_start,double* P4_start,int debug,double* Kq)
+void Cloth_NatQuad_Init(int M,int N,double E,double G,double nu,double thickness,const double* P1,double* P2,const double* P3,const double* P4,const double* P1_loc,const double* ref_angles,const double* P1_start,const double* P2_start,const double* P3_start,const double* P4_start,int debug,double* Kq)
 {
 
   double s[M + 1];
@@ -629,7 +629,7 @@ void Cloth_MassLoc_zFold_Init(int M, int N, double* P1_start, double* P2_start, 
 }
 
 
-void Cloth_NatTri_Init(int M, int N, double E, double G, double nu, double thickness, int index, double* P1, double* P2, double* P3, double* P4, double* P1_loc, double* ref_angles, int* axes_sequence, int debug, double* Kq)
+void Cloth_NatTri_Init(int M, int N, double E, double G, double nu, double thickness, int index, const double* P1, const double* P2, const double* P3, const double* P4, const double* P1_loc, const double* ref_angles, const int* axes_sequence, int debug, double* Kq)
 {
   double s[M+1];// = linspace(0, 1, M + 1);
   double t[N+1];// = linspace(0, 1, N + 1);
