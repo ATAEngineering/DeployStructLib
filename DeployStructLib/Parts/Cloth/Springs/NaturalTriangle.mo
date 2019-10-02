@@ -31,9 +31,9 @@ model NaturalTriangle
   parameter Modelica.Mechanics.MultiBody.Types.SpecularCoefficient specularCoefficient = 0.7 "Reflection of ambient light (= 0: light is completely absorbed)" annotation(Dialog(group = "Surface properties"));
   parameter Real transparency = 0 "Transparency of shape: 0 (= opaque) ... 1 (= fully transparent)" annotation(Dialog(group = "Surface properties"));
 //
+  DeployStructLib.Visualization.Triangle shape(r_0 = {location[1].r_0, location[2].r_0, location[3].r_0}, color = color, specularCoefficient = specularCoefficient, transparency = transparency) if world.enableAnimation and animation;
 protected
   outer Modelica.Mechanics.MultiBody.World world;
-  DeployStructLib.Visualization.Triangle shape(r_0 = {location[1].r_0, location[2].r_0, location[3].r_0}, color = color, specularCoefficient = specularCoefficient, transparency = transparency) if world.enableAnimation and animation;
 equation
   d12 = location[1].r_0 - location[2].r_0;
   d23 = location[2].r_0 - location[3].r_0;
