@@ -1,3 +1,11 @@
+/*
+Licensed by ATA Engineering, Inc. under the BSD 3-Clause License
+
+COPYRIGHT (C) 2018
+BY ATA ENGINEERING, INC.
+ALL RIGHTS RESERVED
+*/
+
 double VectorLength(double v[3]);
 void cA(double* C, double c, double* A, int n);
 void cAinline(double c, double* A, int n);

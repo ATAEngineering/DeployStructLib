@@ -5,7 +5,7 @@ The Deployable Structures Library is a Modelica library providing specialized st
 ## License
 
 This Modelica package is free software and the use is completely at your own risk;
-it can be redistributed and/or modified under the terms of the [Modelica License 2](https://modelica.org/licenses/ModelicaLicense2).
+it can be redistributed and/or modified under the terms of the [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause).
 
 
 Copyright (C) 2018, ATA Engineering, Inc.

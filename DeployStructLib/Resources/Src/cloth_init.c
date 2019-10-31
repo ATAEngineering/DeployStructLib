@@ -1,3 +1,11 @@
+/*
+Licensed by ATA Engineering, Inc. under the BSD 3-Clause License
+
+COPYRIGHT (C) 2018
+BY ATA ENGINEERING, INC.
+ALL RIGHTS RESERVED
+*/
+
 #include "ModelicaUtilities.h"
 #include "math.h"
 #include "stdio.h"

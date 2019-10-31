@@ -18,16 +18,14 @@ The principle investigator is
 </p>
 <p style=\"margin-left: 20px\">
   Cory Rupp, Ph.D.<br>
-  email: <a href=\"mailto:cory.rupp@ata-e.com\">cory.rupp@ata-e.com</a><br>
-  phone: (303) 945-2368
+  email: <a href=\"mailto:cory.rupp@ata-e.com\">cory.rupp@ata-e.com</a>
 </p>
 <p>
 Contributors include
 </p>
 <p style=\"margin-left: 20px\">
   Laura Schweizer <br>
-  email: <a href=\"mailto:laura.schweizer@ata-e.com\">laura.schweizer@ata-e.com</a><br>
-  phone: (303) 945-2367
+  email: <a href=\"mailto:laura.schweizer@ata-e.com\">laura.schweizer@ata-e.com</a>
 </p>
 <br>
 <h4><b><font size=4>Acknowledgements</font></b></h4>
