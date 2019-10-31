@@ -41,7 +41,7 @@ model Section "Basic building block of a fan-fold-style deployable structure"
   parameter Real start_angle_rad = start_angle * Modelica.Constants.pi / 180 "Start angle between section spars at initialization";
   parameter Real[3] R0_angles_rad = R0_angles * Modelica.Constants.pi / 180 "Angles of blanket center of radius at initialization";
 //
-  parameter Real rotate_angle = -acos((1 + cos(span_angle_rad)) / sin(span_angle_rad) * tan(start_angle_rad / 2)) "Blanket rotation angle about spar for initialization";
+  parameter Real rotate_angle = -Modelica.Constants.pi/2-asin(2*sin(start_angle_rad)/sin(span_angle_rad)) "Blanket rotation angle about spar for initialization";
   parameter SI.Position P1[3] = {R_inner, 0, 0};
   parameter SI.Position P2[3] = {R_outer, 0, 0};
   parameter SI.Position P3A[3] = 0.5 * R_outer * {1 + cos(span_angle_rad), sin(span_angle_rad), 0};

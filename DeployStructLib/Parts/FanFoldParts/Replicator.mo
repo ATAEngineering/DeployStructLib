@@ -16,7 +16,7 @@ model Replicator "Connects several Section blocks to form a fan-fold-style deplo
   parameter Integer N "Blanket discretization in the y-direction";
   parameter Integer M = 3 "Blanket discretization in the x-direction";
   parameter Boolean rigid "Should spars be modeled as rigid?";
-  parameter SI.Angle start_angle = 0.0 "start angle between spars";
+  parameter SI.Angle start_angle = 0.0 "start angle (in degrees) between spars";
   parameter SI.Angle span_angle "Undeformed angle (in degrees) that blanket spans, for sizing";
   parameter Real[3] R0_loc = {0, 0, 0} "Location of blanket center of radius at initialization";
   parameter Real[3] R0_angles = {0, 0, 0} "Angles of blanket center of radius at initialization";
@@ -35,23 +35,23 @@ model Replicator "Connects several Section blocks to form a fan-fold-style deplo
   parameter SI.Distance R0 = 0.0 "Distance from center of radius to start of spar";
   parameter SI.Distance R_inner "Distance from start of spar to start of cloth";
   parameter SI.Distance R_outer "Distance from center of radius to end of spar";
-  parameter Real[S, 3] R0_angles_section = array({0, 0, -(i - 1) * start_angle} + R0_angles for i in 1:S);
+  parameter Real[S, 3] R0_angles_section = array({0, 0, (i - 1) * start_angle} + R0_angles for i in 1:S);
   //
-  Section[S] section(each rigid = rigid, each N = N, each M = M, each R_inner = R_inner, each R_outer = R_outer, each R0_loc = R0_loc, R0_angles = R0_angles_section, each clothPropsData = clothPropsData, each matPropsData = matPropsData, each width = width, each height = height, each widthEnd = widthEnd, each heightEnd = heightEnd, each start_angle = -start_angle, each span_angle = span_angle);
+  Section[S] section(each rigid = rigid, each N = N, each M = M, each R_inner = R_inner, each R_outer = R_outer, each R0_loc = R0_loc, R0_angles = R0_angles_section, each clothPropsData = clothPropsData, each matPropsData = matPropsData, each width = width, each height = height, each widthEnd = widthEnd, each heightEnd = heightEnd, each start_angle = start_angle, each span_angle = span_angle);
   //
   Beam beamInnerPanel(L = R_inner, rigid = rigid, xprop = xInnerPanelPropsData, matProp = matPropsData);
   Beam[N] beamMidPanel(each L = (R_outer - R_inner) / N, each rigid = rigid, each xprop = xMidPanelPropsData, each matProp = matPropsData);
   //
   Modelica.Mechanics.MultiBody.Interfaces.Frame_b pulleyFrame;
 equation
-  connect(beamMidPanel[N].frame_b, section[S].frame_blanket[N + 1]);
+  connect(beamMidPanel[N].frame_b, section[1].frame_blanket[N + 1]);
   for i in 1:N loop
-    connect(section[S].frame_blanket[i], beamMidPanel[i].frame_a);
+    connect(section[1].frame_blanket[i], beamMidPanel[i].frame_a);
   end for;
 //
   for j in 1:S - 1 loop
     for i in 1:N + 1 loop
-      connect(section[j + 1].frame_side[i], section[j].frame_blanket[i]);
+      connect(section[j].frame_side[i], section[j+1].frame_blanket[i]);
     end for;
   end for;
   for i in 1:N - 1 loop

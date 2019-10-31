@@ -12,7 +12,7 @@ model SolarSail "A model of a lightweight solar blanket deploying"
   parameter Integer N = 3;
   inner Modelica.Mechanics.MultiBody.World world(g = 0) annotation(
     Placement(visible = true, transformation(origin = {-200, -84}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam1(L_start = 0.5, angles_start(displayUnit = "rad"), matProp = matprop, phi(displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
+  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam1(L_start = 0.5, angles_start(each displayUnit = "rad"), matProp = matprop, phi(each displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
     Placement(visible = true, transformation(origin = {74, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   inner DeployStructLib.DSL_Globals DSLglb annotation(
     Placement(visible = true, transformation(origin = {-88, -88}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
@@ -22,13 +22,13 @@ model SolarSail "A model of a lightweight solar blanket deploying"
     Placement(visible = true, transformation(origin = {-26, -88}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Sources.Step step1(height = 0.1, startTime = 0) annotation(
     Placement(visible = true, transformation(origin = {-82, -42}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  DeployStructLib.Parts.Utilities.Body body1(angles_start(displayUnit = "rad"), m = 1, phi(displayUnit = "rad"), r_CM = {0, 0, 0}) annotation(
+  DeployStructLib.Parts.Utilities.Body body1(angles_start(each displayUnit = "rad"), m = 1, phi(each displayUnit = "rad"), r_CM = {0, 0, 0}) annotation(
     Placement(visible = true, transformation(origin = {10, 4}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam2(L_start = 0.5, angles_start(displayUnit = "rad"), matProp = matprop, phi(displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
+  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam2(L_start = 0.5, angles_start(each displayUnit = "rad"), matProp = matprop, phi(each displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
     Placement(visible = true, transformation(origin = {-2, -68}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
-  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam3(L_start = 0.5, angles_start(displayUnit = "rad"), matProp = matprop, phi(displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
+  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam3(L_start = 0.5, angles_start(each displayUnit = "rad"), matProp = matprop, phi(each displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
     Placement(visible = true, transformation(origin = {-2, 68}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
-  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam4(L_start = 0.5, angles_start(displayUnit = "rad"), matProp = matprop, phi(displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
+  DeployStructLib.Parts.VariableLengthBeam variableLengthBeam4(L_start = 0.5, angles_start(each displayUnit = "rad"), matProp = matprop, phi(each displayUnit = "rad"), rho(displayUnit = "kg/m3"), xprop = xprop) annotation(
     Placement(visible = true, transformation(origin = {-74, 6}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   Modelica.Mechanics.MultiBody.Parts.Fixed fixed1 annotation(
     Placement(visible = true, transformation(origin = {-30, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
