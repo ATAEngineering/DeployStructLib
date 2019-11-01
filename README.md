@@ -30,5 +30,6 @@ This work was funded under Phase I and Phase II Small Business Innovation Resear
 
 ## Related Publications
 
-Rupp, C., and L. Schweizer The Deployable Structures Library. Proceedings of the 1st American Modelica Conference, Cambridge, MA, October 2018. doi: 10.3384/ecp18154187.
-Rupp, C., L. Schweizer, and D. Murphy. Rapid Parametric Analysis and Design of Space-Based Solar Arrays. AIAA SciTech Conference, San Diego, California, January 2016. doi: 10.2514/6.2016-1702
+ - Rupp, C., and L. Schweizer The Deployable Structures Library. Proceedings of the 1st American Modelica Conference, Cambridge, MA, October 2018. doi: 10.3384/ecp18154187.
+
+ - Rupp, C., L. Schweizer, and D. Murphy. Rapid Parametric Analysis and Design of Space-Based Solar Arrays. AIAA SciTech Conference, San Diego, California, January 2016. doi: 10.2514/6.2016-1702
